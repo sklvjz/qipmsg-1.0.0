@@ -1,0 +1,16 @@
+rpm release
+-----------
+1. change version in qipmsg.spec
+2. change version in src/version.h
+3. disable debug in src/qipmsg.pro
+4. make clean
+5. rm tags; rm src/tags
+6. rm src/cscope.*
+
+deb release
+-----------
+1. change version in src/version.h
+2. disable debug in src/qipmsg.pro
+3. prepare qipmsg-{version}.tar.gz
+4. update changelog, control, rules, copyright
+5. run 'debuild' in top src directory

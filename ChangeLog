@@ -1,0 +1,10 @@
+Changes for 1.0.0:
+ * Message default not sealed.
+ * Fix send file bug.
+
+Changes for 0.9.9:
+ * Ability to add specified broadcast address.
+
+Changes for 0.9.7:
+
+ * Bug fix with Qt 4.6.

@@ -1,0 +1,90 @@
+This document explains how to compile and install qipmsg.
+
+Compiling qipmsg should be easy. It only depends on Qt. To compile qipmsg,
+you need qt version 4.3 or greater.
+
+
+1) How to make a rpm package for Fedora
+2) How to make a deb package for Ubuntu
+3) Generic compilation
+4) Changing installation path
+
+
+1) How to make a rpm package for Fedora
+---------------------------------------
+Run command:
+
+	# rpmbuid -tb qipmsg-0.9.x.tar.bz2
+
+You'll find the rpm package under /usr/src/redhat/RPMS/i386/
+
+2) How to make a deb package for Ubuntu
+---------------------------------------
+
+	$ mkdir qipmsg/
+	$ cp qipmsg-0.9.x.tar.gz qipmsg/
+	$ cd qipmsg
+	$ cp qipmsg-0.9.x.tar.gz qipmsg_0.9.x.orig.tar.gz
+	$ tar zxvf qipmsg_0.9.x.tar.gz; cd qipmsg-0.9.x
+	$ debuild
+
+You'll found the deb package in the directory above the current directory.
+
+3) Compile qipmsg on opensuse
+-----------------------------
+You need first install libqt4-devel, libqt4 package. After this, Just run:
+
+	$ make QMAKE=qmake LRELEASE=lrelease
+	$ make install
+
+
+4) Generic compilation
+----------------------
+You need at least Qt 4.3 to compile qipmsg. Older version not tested.
+
+Be sure you have installed the Qt 4 development package. Its name maybe
+qt-devel, libqt4-dev or similar. You also need to install alsa development
+package, Its name maybe alsa-devel, libasound2-dev or similar.
+
+Uncompress the source code, open a console and enter in the qipmsg-0.9.x
+directory. Run:
+
+	$ make
+
+If everything is ok now you can install it with command:
+
+	$ make install
+
+That will install qipmsg in /usr.
+
+If "make" fails, it's probably because the Qt 3 qmake has been used instead of
+the Qt 4 one. It seems that some distros have renamed that tool to qmake-qt4.
+Others may have installed in another directory.
+Look at the contents of the qt4-devel package (or whatever its name is) and
+find out where it is.
+
+Now type something like this (just examples):
+make QMAKE=qmake-qt4
+or
+make QMAKE=/usr/share/qt4/bin/qmake
+
+
+5) Changing installation path
+-----------------------------
+By default qipmsg will be installed in /usr. You can change it by
+using PREFIX and DESTDIR.
+
+Examples:
+make PREFIX=/usr/local
+make PREFIX=/usr/local install
+
+That would install qipmsg under /usr/local.
+
+DESTDIR will be useful for package maintainers.
+
+make PREFIX=/usr
+make PREFIX=/usr DESTDIR=/tmp/ install
+
+That would compile qipmsg for /usr but in fact it will be installed in
+/tmp/usr/.
+

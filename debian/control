@@ -1,0 +1,16 @@
+Source: qipmsg
+Section: net
+Priority: extra
+Maintainer: Yichi Zhang <zyichi@gmail.com>
+Build-Depends: debhelper (>= 5), libqt4-dev (>=4.3), libasound2-dev (>=1.0.15)
+Standards-Version: 3.7.2
+Homepage: http://code.google.com/p/qipmsg/
+
+Package: qipmsg
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: An open-source Qt4 implementaiton of IP Messenger for linux.
+ QIpMsg is an IP Messenger implementaion for linux. Visit
+ http://www.ipmsg.org/index.html.en for more info about IP Messenger.
+ QIpMsg 是Linux 系统下的飞鸽传书软件。可访问 http://www.ipmsg.org/index.html.en
+ 获得飞鸽传书的详细信息。

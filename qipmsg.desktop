@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Name=IP Messenger
+Name[zh_CN]=飞鸽传书
+GenericName=IP Messenger
+GenericName[zh_CN]=飞鸽传书
+Comment=Chat and transfer file over local network
+Comment[zh_CN]=局域网聊天及文件传输工具
+Exec=qipmsg
+Icon=qipmsg
+Terminal=false
+Type=Application
+Categories=Network;

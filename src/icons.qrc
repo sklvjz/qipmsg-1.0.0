@@ -1,0 +1,6 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource prefix="/">
+        <file>icons/qipmsg.xpm</file>
+        <file>icons/qipmsg_recv.xpm</file>
+    </qresource>
+</RCC>

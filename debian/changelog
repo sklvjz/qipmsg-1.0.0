@@ -1,0 +1,30 @@
+qipmsg (0.9.6-1) unstable; urgency=low
+
+  * BUG FIX: qipmsg crashed when send file to multiple user
+  * BUG FIX: file transfer failed when user cancel file transfer then get file
+    again.
+  * BUG FIX: when receive folder, cancel transfer not realy work.
+  * not exit qipmsg when udp message can not sended, just show a warning
+    message. exit qipmsg when udp bind error.
+  * drag file to message input area now add file to send list, not append file
+    path to the message.
+  * send file window and receive file window now show file size in MB when
+    file bigger than 1 MB, previously in KB.
+  * support to reserve modify time of received file.
+
+ -- Yichi Zhang <zyichi@gmail.com>  Wed, 10 Sep 2008 21:28:22 +0800
+
+qipmsg (0.9.5-1) unstable; urgency=low
+
+  * BUG FIX: Hostname not display in main window (Ubuntu 8.04)
+  * BUG FIX: No notice sound when receive message (Ubuntu 8.04)
+  * BUG FIX: Newly added group no show in group select menu in main window
+
+ -- Yichi Zhang <zyichi@gmail.com>  Mon, 01 Sep 2008 01:53:17 +0800
+
+qipmsg (0.9.4-1) unstable; urgency=low
+
+  * Initial release
+
+ -- Yichi Zhang <zyichi@gmail.com>  Sun, 31 Aug 2008 16:23:17 +0800
+
